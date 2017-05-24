@@ -1,1 +1,1 @@
-include ':app', ':sample', ':applib'
+include ':app', ':sample', ':applib', ':temp', ':uppercase', ':album'

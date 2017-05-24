@@ -7,7 +7,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.codekul.sample"
+        applicationId "com.codekul.temp"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
@@ -32,8 +32,4 @@ dependencies {
 
     compile 'com.android.support:appcompat-v7:25.3.1'
     testCompile 'junit:junit:4.12'
-
-    compile 'cc.redberry:physics:1.1.10'
-
-    compile project(':applib')
 }
