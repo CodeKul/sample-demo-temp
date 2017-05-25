@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    public static final String KEY_RES = "keyRes";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
         Bundle bundle = responsibleIntent.getExtras();
 
         if (bundle != null) {
-            String userName = bundle.getString("keyStr");
+            String userName = bundle.getString(MainActivity.KEY_STR);
             ((TextView) findViewById(R.id.txUserName)).setText(userName);
         }
 
@@ -27,7 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Bundle bundle = new Bundle();
-                bundle.putString("keyRes", getDeviceName());
+                bundle.putString(KEY_RES, getDeviceName());
 
                 Intent intent = new Intent();
                 intent.putExtras(bundle);

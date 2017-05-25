@@ -10,6 +10,10 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String KEY_STR = "keyStr";
+    public static final String KEY_INT = "keyInt";
+    public static final int REQ_PROFILE = 4568;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +30,15 @@ public class MainActivity extends AppCompatActivity {
                         && password.equalsIgnoreCase("codekul")) {
 
                     Bundle bundle = new Bundle();
-                    bundle.putString("keyStr", userName);
-                    bundle.putInt("keyInt", 123);
+                    bundle.putString(KEY_STR, userName);
+                    bundle.putInt(KEY_INT, 123);
 
                     Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                     intent.putExtras(bundle);
 
                     //startActivity(intent);
 
-                    startActivityForResult(intent, 4568);
+                    startActivityForResult(intent, REQ_PROFILE);
                 }
             }
         });
@@ -44,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 4568) {
+        if (requestCode == REQ_PROFILE) {
             // you r coming back from Profile Activity
             if (resultCode == RESULT_OK) {
 
                 if (data != null) {
                     Bundle bundle = data.getExtras();
-                    String res = bundle.getString("keyRes");
+                    String res = bundle.getString(ProfileActivity.KEY_RES);
                     ((EditText) findViewById(R.id.etUserName)).setText(res);
                 }
             }
