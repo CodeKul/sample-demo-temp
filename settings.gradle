@@ -1,1 +1,1 @@
-include ':app', ':sample', ':applib', ':temp', ':uppercase', ':album', ':interactivitycommunication', ':customviews', ':compoundviews', ':listview', ':viewanimations', ':activitylifecycle'
+include ':app', ':sample', ':applib', ':temp', ':uppercase', ':album', ':interactivitycommunication', ':customviews', ':compoundviews', ':listview', ':viewanimations', ':activitylifecycle', ':activitystatemgmt'
