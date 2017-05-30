@@ -6,10 +6,12 @@ package com.codekul.listview;
 
 public class MyItem {
 
+    public long idItem;
     public int imgId;
     public String text;
 
-    public MyItem(int imgId, String text) {
+    public MyItem(long idItem, int imgId, String text) {
+        this.idItem = idItem;
         this.imgId = imgId;
         this.text = text;
     }

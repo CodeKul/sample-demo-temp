@@ -39,13 +39,17 @@ public class MyAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return position * 15;
+        return dataSet.get(position).idItem;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        View root = inflater.inflate(R.layout.my_view, parent, false);
+        View root = null;
+        if (convertView == null)
+            root = inflater.inflate(R.layout.my_view, parent, false);
+        else root = convertView;
+
         ((ImageView) root.findViewById(R.id.imgView)).setImageResource(dataSet.get(position).imgId);
         ((TextView) root.findViewById(R.id.txtName)).setText(dataSet.get(position).text);
 

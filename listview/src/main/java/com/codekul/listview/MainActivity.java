@@ -50,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void custom() {
         List<MyItem> dataSet = new ArrayList<>();
-        dataSet.add(new MyItem(R.mipmap.ic_launcher, "Android"));
-        dataSet.add(new MyItem(R.mipmap.ic_launcher, "Apple"));
-        dataSet.add(new MyItem(R.mipmap.ic_launcher, "Rim"));
-        dataSet.add(new MyItem(R.mipmap.ic_launcher, "Mango"));
-        dataSet.add(new MyItem(R.mipmap.ic_launcher, "bada"));
-        dataSet.add(new MyItem(R.mipmap.ic_launcher, "Palm"));
-        dataSet.add(new MyItem(R.mipmap.ic_launcher, "Symbian"));
+        dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "Android"));
+        dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "Apple"));
+        dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "Rim"));
+        dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "Mango"));
+        dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "bada"));
+        dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "Palm"));
+        dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "Symbian"));
 
         MyAdapter adapter = new MyAdapter(this, dataSet);
         ((ListView) findViewById(R.id.lstCountries)).setAdapter(adapter);

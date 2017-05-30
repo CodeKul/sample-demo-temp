@@ -31,15 +31,22 @@ public class MainActivity extends AppCompatActivity {
         FrameLayout frameTwo = (FrameLayout) findViewById(R.id.frameTwo);
         frameTwo.removeAllViews();
 
-        View viewInflated1 = inflater.inflate(R.layout.compound_layout, frameOne, true);
+        final View viewInflated1 = inflater.inflate(R.layout.compound_layout, frameOne, true);
         ((CheckBox) viewInflated1.findViewById(R.id.chk)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                ((TextView) findViewById(R.id.txtVw)).setText(Boolean.toString(isChecked));
+
+                ((TextView) viewInflated1.findViewById(R.id.txtVw)).setText(Boolean.toString(isChecked));
             }
         });
 
-        View viewInflated2 = inflater.inflate(R.layout.compound_layout, frameTwo, false);
+        final View viewInflated2 = inflater.inflate(R.layout.compound_layout, frameTwo, false);
+        ((CheckBox) viewInflated2.findViewById(R.id.chk)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                ((TextView) viewInflated2.findViewById(R.id.txtVw)).setText(Boolean.toString(isChecked));
+            }
+        });
         frameTwo.addView(viewInflated2);
     }
 }
