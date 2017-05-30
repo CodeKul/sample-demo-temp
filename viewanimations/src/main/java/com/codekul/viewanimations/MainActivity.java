@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnAnimate).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Animation animation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.rotate);
                 findViewById(R.id.imgLogo).startAnimation(animation);
             }
