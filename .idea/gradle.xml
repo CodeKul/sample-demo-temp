@@ -15,6 +15,9 @@
             <option value="$PROJECT_DIR$/applib" />
             <option value="$PROJECT_DIR$/compoundviews" />
             <option value="$PROJECT_DIR$/customviews" />
+            <option value="$PROJECT_DIR$/externalizingresources" />
+            <option value="$PROJECT_DIR$/handleruntimechangesv1" />
+            <option value="$PROJECT_DIR$/handleruntimechangev2" />
             <option value="$PROJECT_DIR$/interactivitycommunication" />
             <option value="$PROJECT_DIR$/listview" />
             <option value="$PROJECT_DIR$/sample" />
