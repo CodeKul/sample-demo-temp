@@ -1,10 +1,12 @@
 package com.codekul.listview;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -13,6 +15,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    Runnable run = new MyRun();
+    Runnable run1 = new Runnable() {
+        @Override
+        public void run() {
+
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void custom() {
+        findViewById(R.id.etCountry).setEnabled(false);
+        findViewById(R.id.btnAdd).setEnabled(false);
+
         List<MyItem> dataSet = new ArrayList<>();
         dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "Android"));
         dataSet.add(new MyItem(System.currentTimeMillis(), R.mipmap.ic_launcher, "Apple"));
@@ -61,4 +75,19 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter adapter = new MyAdapter(this, dataSet);
         ((ListView) findViewById(R.id.lstCountries)).setAdapter(adapter);
     }
+
+    private void disabled() {
+        findViewById(R.id.etCountry).setEnabled(false);
+        findViewById(R.id.btnAdd).setEnabled(false);
+    }
+
+    class MyRun implements Runnable {
+
+        @Override
+        public void run() {
+
+        }
+    }
 }
+
+
