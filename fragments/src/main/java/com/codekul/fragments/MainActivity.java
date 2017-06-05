@@ -18,10 +18,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void loadFragment(Fragment frag) {
+
+        String backStateName = frag.getClass().getName();
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction txn = manager.beginTransaction();
         txn.setCustomAnimations(R.anim.enter, R.anim.exit);
         txn.replace(R.id.frameSecond, frag);
+        txn.addToBackStack(backStateName);
         txn.commit();
     }
 }

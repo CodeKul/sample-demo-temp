@@ -19,6 +19,15 @@ public class PanelFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public static PanelFragment getInstance(String str) {
+
+        Bundle bundle = new Bundle();
+        bundle.putString("myKey", str);
+
+        PanelFragment fragment = new PanelFragment();
+        fragment.setArguments(bundle);
+        return fragment;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

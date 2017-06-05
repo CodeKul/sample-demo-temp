@@ -38,11 +38,13 @@ public class FirstFragment extends Fragment {
 
         final View rootView = inflater.inflate(R.layout.fragment_first, container, false);
 
-        Bundle bundle = getArguments();
-        int img = bundle.getInt(KEY_FRAG_NUM);
-
         ImageView imageView = (ImageView) rootView.findViewById(R.id.imageView);
-        imageView.setImageResource(img);
+        Bundle bundle = getArguments();
+
+        if (bundle != null) {
+            int img = bundle.getInt(KEY_FRAG_NUM);
+            imageView.setImageResource(img);
+        }
 
         return rootView;
     }
