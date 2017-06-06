@@ -26,6 +26,7 @@
             <option value="$PROJECT_DIR$/statusbarnotifications" />
             <option value="$PROJECT_DIR$/temp" />
             <option value="$PROJECT_DIR$/toast" />
+            <option value="$PROJECT_DIR$/uithread" />
             <option value="$PROJECT_DIR$/uppercase" />
             <option value="$PROJECT_DIR$/viewanimations" />
           </set>
