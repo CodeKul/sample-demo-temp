@@ -1,5 +1,6 @@
 package com.codekul.uithread;
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.os.Looper;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onBtnClick(View view) {
 
+        new MyTask().execute(0, 100/*params*/);
     }
 
     private void handlerDemo() {
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }).start();
     }
+
     private void workerThread() {
         new Thread(new Runnable() {
             @Override
@@ -64,7 +67,54 @@ public class MainActivity extends AppCompatActivity {
         }).start();
     }
 
-    private class MyTask extends AsyncTask {
+    private class MyTask extends AsyncTask<Integer/*params*/, Integer/*progress*/, Boolean/*Result*/> {
 
+        private ProgressDialog pd;
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+            // pd = ProgressDialog.show(MainActivity.this,"Title","Message");
+            pd = new ProgressDialog(MainActivity.this);
+            pd.setMax(100);
+            pd.setTitle("Title");
+            pd.setMessage("Message");
+            pd.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            pd.show();
+            // UI thread
+        }
+
+        @Override
+        protected Boolean/*Result*/ doInBackground(Integer... params/*Params*/) {
+            // Worker Thread
+
+            for (int i = params[0]; i < params[1]; i++) {
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                publishProgress(i);
+            }
+
+            return true;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean aBoolean/*Result*/) {
+            super.onPostExecute(aBoolean);
+            //Ui thread
+            pd.dismiss();
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values/*Progress*/) {
+            super.onProgressUpdate(values);
+
+            ((TextView) findViewById(R.id.txtCntr)).setText(String.valueOf(values[0]));
+            pd.setProgress(values[i]);
+            // Ui thread
+        }
     }
 }
