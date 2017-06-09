@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         handler = new Handler(Looper.getMainLooper());
     }
 
-
     public void onBtnClick(View view) {
 
         new MyTask().execute(0, 100/*params*/);

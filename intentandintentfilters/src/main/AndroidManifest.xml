@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codekul.intentandintentfilters">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RedActivity">
+            <intent-filter>
+                <action android:name="com.codekul.action.RED" />
+                <action android:name="android.intent.action.DIAL" />
+
+                <category android:name="com.codekul.category.RGB" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BlueActivity">
+            <intent-filter>
+                <action android:name="com.codekul.action.RED" />
+                <category android:name="com.codekul.category.OTHER" />
+                <action android:name="com.codekul.action.BLUE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+                <action android:name="com.codekul.action.RED" />
+                <action android:name="com.codekul.action.GREEN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+</manifest>
