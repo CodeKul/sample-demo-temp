@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/customviews/customviews.iml" filepath="$PROJECT_DIR$/customviews/customviews.iml" />
       <module fileurl="file://$PROJECT_DIR$/dialog/dialog.iml" filepath="$PROJECT_DIR$/dialog/dialog.iml" />
       <module fileurl="file://$PROJECT_DIR$/externalizingresources/externalizingresources.iml" filepath="$PROJECT_DIR$/externalizingresources/externalizingresources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/externalstorage/externalstorage.iml" filepath="$PROJECT_DIR$/externalstorage/externalstorage.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragments/fragments.iml" filepath="$PROJECT_DIR$/fragments/fragments.iml" />
       <module fileurl="file://$PROJECT_DIR$/handleruntimechangesv1/handleruntimechangesv1.iml" filepath="$PROJECT_DIR$/handleruntimechangesv1/handleruntimechangesv1.iml" />
       <module fileurl="file://$PROJECT_DIR$/handleruntimechangev2/handleruntimechangev2.iml" filepath="$PROJECT_DIR$/handleruntimechangev2/handleruntimechangev2.iml" />

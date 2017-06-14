@@ -19,6 +19,7 @@
             <option value="$PROJECT_DIR$/customviews" />
             <option value="$PROJECT_DIR$/dialog" />
             <option value="$PROJECT_DIR$/externalizingresources" />
+            <option value="$PROJECT_DIR$/externalstorage" />
             <option value="$PROJECT_DIR$/fragments" />
             <option value="$PROJECT_DIR$/handleruntimechangesv1" />
             <option value="$PROJECT_DIR$/handleruntimechangev2" />
