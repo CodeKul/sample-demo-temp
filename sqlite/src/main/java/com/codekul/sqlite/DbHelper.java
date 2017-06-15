@@ -16,7 +16,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL("create table codeTab(devNm text, desg number, proj text)");
     }
 
     @Override
