@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/compoundviews" />
             <option value="$PROJECT_DIR$/contactapp" />
             <option value="$PROJECT_DIR$/customviews" />
+            <option value="$PROJECT_DIR$/demolect" />
             <option value="$PROJECT_DIR$/dialog" />
             <option value="$PROJECT_DIR$/externalizingresources" />
             <option value="$PROJECT_DIR$/externalstorage" />
@@ -27,6 +28,7 @@
             <option value="$PROJECT_DIR$/intentandintentfilters" />
             <option value="$PROJECT_DIR$/interactivitycommunication" />
             <option value="$PROJECT_DIR$/internalstorage" />
+            <option value="$PROJECT_DIR$/jsonparsing" />
             <option value="$PROJECT_DIR$/listview" />
             <option value="$PROJECT_DIR$/runtimepermissions" />
             <option value="$PROJECT_DIR$/sample" />
