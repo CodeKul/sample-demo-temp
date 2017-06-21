@@ -13,6 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final int REQ_CALL_PHONE = 4567;
@@ -72,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == REQ_CALL_PHONE) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 onOkay(null);
+
             }
         }
     }
