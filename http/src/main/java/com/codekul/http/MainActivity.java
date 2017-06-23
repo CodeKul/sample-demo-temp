@@ -1,24 +1,49 @@
 package com.codekul.http;
 
+import android.Manifest;
 import android.app.ProgressDialog;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.codekul.http.domain.Wh;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
+
+    private LocationManager manager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        manager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            return;
+        }
+        manager.requestLocationUpdates(
+                LocationManager.GPS_PROVIDER,
+                500,
+                0.1f,
+                new MyLocation()
+        );
     }
 
     public void onOkay(View view) {
@@ -47,5 +72,61 @@ public class MainActivity extends AppCompatActivity {
                 pd.dismiss();
             }
         }));
+    }
+
+    public void postLocation(double lat, double lng) {
+
+        JSONObject locObj = new JSONObject();
+        try {
+            locObj.put("lat", lat);
+            locObj.put("lng", lng);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        final App app = (App) getApplication();
+
+        app.q().add(new JsonObjectRequest(
+                "https://digital-shelter-153912.firebaseio.com/myLoc.json",
+                locObj,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Toast.makeText(app, "Location Posted", Toast.LENGTH_SHORT).show();
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(app, "Error", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        ));
+    }
+
+    private class MyLocation implements LocationListener {
+
+        @Override
+        public void onLocationChanged(Location location) {
+            ((TextView) findViewById(R.id.textView))
+                    .setText("Lat - " + location.getLatitude() + " Lng - " + location.getLongitude());
+
+            postLocation(location.getLatitude(), location.getLongitude());
+        }
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+
+        }
+
+        @Override
+        public void onProviderEnabled(String provider) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String provider) {
+
+        }
     }
 }
