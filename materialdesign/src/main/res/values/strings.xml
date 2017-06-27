@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MaterialDesign</string>
+    <string name="action_settings">Settings</string>
+    <string name="mnCut">Cut</string>
+    <string name="title_activity_cut">CutActivity</string>
+</resources>
