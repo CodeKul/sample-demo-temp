@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/assignment/assignment.iml" filepath="$PROJECT_DIR$/assignment/assignment.iml" />
       <module fileurl="file://$PROJECT_DIR$/bluetooth/bluetooth.iml" filepath="$PROJECT_DIR$/bluetooth/bluetooth.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcastreceiver/broadcastreceiver.iml" filepath="$PROJECT_DIR$/broadcastreceiver/broadcastreceiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/camera/camera.iml" filepath="$PROJECT_DIR$/camera/camera.iml" />
       <module fileurl="file://$PROJECT_DIR$/carpoolingpoc/carpoolingpoc.iml" filepath="$PROJECT_DIR$/carpoolingpoc/carpoolingpoc.iml" />
       <module fileurl="file://$PROJECT_DIR$/compoundviews/compoundviews.iml" filepath="$PROJECT_DIR$/compoundviews/compoundviews.iml" />
       <module fileurl="file://$PROJECT_DIR$/contactapp/contactapp.iml" filepath="$PROJECT_DIR$/contactapp/contactapp.iml" />
@@ -43,6 +44,7 @@
       <module fileurl="file://$PROJECT_DIR$/uithread/uithread.iml" filepath="$PROJECT_DIR$/uithread/uithread.iml" />
       <module fileurl="file://$PROJECT_DIR$/uppercase/uppercase.iml" filepath="$PROJECT_DIR$/uppercase/uppercase.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewanimations/viewanimations.iml" filepath="$PROJECT_DIR$/viewanimations/viewanimations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wifi/wifi.iml" filepath="$PROJECT_DIR$/wifi/wifi.iml" />
     </modules>
   </component>
 </project>
