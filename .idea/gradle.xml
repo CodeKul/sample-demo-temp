@@ -14,7 +14,9 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/applib" />
             <option value="$PROJECT_DIR$/assignment" />
+            <option value="$PROJECT_DIR$/bluetooth" />
             <option value="$PROJECT_DIR$/broadcastreceiver" />
+            <option value="$PROJECT_DIR$/carpoolingpoc" />
             <option value="$PROJECT_DIR$/compoundviews" />
             <option value="$PROJECT_DIR$/contactapp" />
             <option value="$PROJECT_DIR$/customviews" />

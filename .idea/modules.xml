@@ -9,7 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/applib/applib.iml" filepath="$PROJECT_DIR$/applib/applib.iml" />
       <module fileurl="file://$PROJECT_DIR$/assignment/assignment.iml" filepath="$PROJECT_DIR$/assignment/assignment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bluetooth/bluetooth.iml" filepath="$PROJECT_DIR$/bluetooth/bluetooth.iml" />
       <module fileurl="file://$PROJECT_DIR$/broadcastreceiver/broadcastreceiver.iml" filepath="$PROJECT_DIR$/broadcastreceiver/broadcastreceiver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/carpoolingpoc/carpoolingpoc.iml" filepath="$PROJECT_DIR$/carpoolingpoc/carpoolingpoc.iml" />
       <module fileurl="file://$PROJECT_DIR$/compoundviews/compoundviews.iml" filepath="$PROJECT_DIR$/compoundviews/compoundviews.iml" />
       <module fileurl="file://$PROJECT_DIR$/contactapp/contactapp.iml" filepath="$PROJECT_DIR$/contactapp/contactapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/customviews/customviews.iml" filepath="$PROJECT_DIR$/customviews/customviews.iml" />
